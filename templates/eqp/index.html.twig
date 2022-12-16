@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EqpController!{% endblock %}
+
+{% block body %}
+
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Marque</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Description</th>
+          <th scope="col">Quantite</th>
+        </tr>
+      </thead>
+      {% for equipement in equipement %}
+        <tbody>
+          <tr class="table-active">
+            <td>{{ equipement.id}}</td>
+            <td>{{ equipement.Nom}}</td>
+            <td>{{ equipement.Marque}}</td>
+            <td>{{ equipement.Prix}}</td>
+            <td>{{ equipement.Description}}</td>
+            <td>{{ equipement.Quantite}}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+  </table>
+{% endblock %}

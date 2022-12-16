@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formEquipement 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+    <h1> Formulaire d'equipements </h1> 
+
+    {{ form_start(formEquipement)}}
+
+    {{ form_widget(formEquipement)}}
+
+    {{form_end(formEquipement)}}
+    
+{% endblock %}
